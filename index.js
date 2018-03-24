@@ -13,16 +13,12 @@ exports.compare = function (a, b) {
   return a < b ? -1 : a > b ? 1 : 0
 }
 
-function has(obj, key) {
-  return Object.hasOwnProperty.call(obj, key)
-}
-
 // to be compatible with the current abstract-leveldown tests
 // nullish or empty strings.
 // I could use !!val but I want to permit numbers and booleans,
 // if possible.
 
-function isDef (val) {
+function isDef (val) 
   return val !== undefined && val !== ''
 }
 
